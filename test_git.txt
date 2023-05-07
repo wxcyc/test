@@ -111,3 +111,5 @@ git cherry-pick <某一次的提交的修改内容>       把某一次修改的�
 git remote -v 查看远程库的信息，显示了可以抓取和推送的origin的地址，如果没有推送权限，就看不到push的地址
 
 git push origin master  推送指定的分支到该分支对应的远程仓库
+
+这次改动是微课是否对应远程dev
