@@ -9,12 +9,14 @@ Git is free software.
 
 
 
---  常用的修改命令
+--  常用的修改命令------------------------------------------------------------------------
 [ESC] ->  :wq  退出文本编辑
 
 git add 添加到仓库
 
 git commit -m"提交信息"
+
+git push origin master  推送指定的分支到该分支对应的远程仓库
 
 git status  当前状态
 
@@ -48,6 +50,10 @@ git reset HEAD <file>   撤销暂存区的修改
 rm <file> 删除
     如果要撤回，通过checkout -- <file> 
 
+
+
+
+-- 创建仓库相关----------------------------------------------------------------------------
 $ ssh-keygen -t rsa -C "youremail@example.com"  创建本机git钥匙
  c/Users/Administrator/.ssh/id_rsa  钥匙所在
  github上添加对应本地公钥，才能将github作为一个服务器进行备份版本
@@ -61,10 +67,14 @@ git remote rm origin    接触远程连接
 $ git clone git@github.com:michaelliao/gitskills.git    克隆远程仓库文件
 
 
+
+
+-- 切换分支相关---------------------------------------------------------------------------
 git checkout -b <dev> 创建并切换到新分支
      git branch <dev> 创建
      git checkout <dev>   切换
      git branch -d <dev>  删除分支dev
+     git branch -D <name>  强行删除一个没有合并的分支
 
 git switch -c dev   创建并切换到新分支
     git switch master   切换
@@ -77,3 +87,27 @@ git merge <要合并的分支名>   合并分支
 分支2
 
 $ git commit -m"md" 在更改文件后，合并
+
+git merge --no-ff -m "merge with no-ff" <dev> 强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+
+
+
+
+-- 保存进度相关---------------------------------------------------------------------------
+git stash   保存当前的进度
+git stash list  查看stash的进度
+
+git stash apply    恢复stash的进度        git stash drop 删除stash的内容
+git stash pop   恢复的同时删除stash
+git stash apply stash@{0}   恢复指定的stash
+
+
+git cherry-pick <某一次的提交的修改内容>       把某一次修改的内容复制到当前分支，并自动提交。用来复制小的修改
+
+
+
+
+-- push相关---------------------------------------------------------------------------
+git remote -v 查看远程库的信息，显示了可以抓取和推送的origin的地址，如果没有推送权限，就看不到push的地址
+
+git push origin master  推送指定的分支到该分支对应的远程仓库
