@@ -59,3 +59,10 @@ git remote -v   查看远程仓库信息
 git remote rm origin    接触远程连接
 
 $ git clone git@github.com:michaelliao/gitskills.git    克隆远程仓库文件
+
+
+git checkout -b dev 创建并切换到新分支
+     git branch dev 创建
+     git checkout dev   切换
+
+git branch  查看当前分支
