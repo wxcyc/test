@@ -69,3 +69,5 @@ git checkout -b <dev> 创建并切换到新分支
 git branch  查看当前分支
 
 git merge <要合并的分支名>   合并分支
+
+分支1
