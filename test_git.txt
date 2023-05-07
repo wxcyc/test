@@ -11,23 +11,39 @@ Git is free software.
 
 --  常用的修改命令
 [ESC] ->  :wq  退出文本编辑
+
 git add 添加到仓库
+
 git commit -m"提交信息"
+
 git status  当前状态
+
 git ls-files    查看暂存区文件
+
 git ls-files my_directory/      查看所有文件
+
 git diff    上次修改文件信息
+
 git diff HEAD -- <file>  查看工作区和版本库的区别
+
 git log --pretty=oneline    查看每次修改的记录和注释
+
 git reset --hard HEAD^  回退到上一个版本
+
 git reset --hard HEAD^^ 回退到上上个版本
+
 git reset --hard HEAD~4 回退到4个版本之前
+
 git --hard 将git的当前指针指向后面要设置的版本
+
 git reset --hard 1094axxxx....   通过commit id回退到未来的版本
+
 git reflog  查看记录的每一次命令，方便回退
+
 git checkout -- <file>  丢弃工作区的修改，回到最近一次add 或者commit的状态
     如果上一次是add，撤回到上一次add后暂存区的版本
     如果上一次是commit，撤回到上一次commit后版本库的版本
+
 git reset HEAD <file>   撤销暂存区的修改    
 rm <file> 删除
     如果要撤回，通过checkout -- <file> 
@@ -38,3 +54,8 @@ $ ssh-keygen -t rsa -C "youremail@example.com"  创建本机git钥匙
 
 $ git remote add origin git@github.com:yourgithubname/yourfilename.git   远程添加本地仓库
 
+git remote -v   查看远程仓库信息
+
+git remote rm origin    接触远程连接
+
+$ git clone git@github.com:michaelliao/gitskills.git    克隆远程仓库文件
