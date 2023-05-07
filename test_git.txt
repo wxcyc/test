@@ -34,5 +34,5 @@ $ ssh-keygen -t rsa -C "youremail@example.com"  常见本机git钥匙
  c/Users/Administrator/.ssh/id_rsa  钥匙所在
  github上添加对应本地公钥，才能将github作为一个服务器进行备份版本
 
-
+$ git remote add origin git@github.com:wxcyc/learngit.git     远程添加本地仓库
 
