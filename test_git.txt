@@ -52,7 +52,7 @@ $ ssh-keygen -t rsa -C "youremail@example.com"  创建本机git钥匙
  c/Users/Administrator/.ssh/id_rsa  钥匙所在
  github上添加对应本地公钥，才能将github作为一个服务器进行备份版本
 
-$ git remote add origin git@github.com:yourgithubname/yourfilename.git   远程添加本地仓库
+$ git remote add origin git@github.com:<yourgithubname>/<yourfilename>.git   远程添加本地仓库
 
 git remote -v   查看远程仓库信息
 
@@ -61,8 +61,10 @@ git remote rm origin    接触远程连接
 $ git clone git@github.com:michaelliao/gitskills.git    克隆远程仓库文件
 
 
-git checkout -b dev 创建并切换到新分支
-     git branch dev 创建
-     git checkout dev   切换
+git checkout -b <dev> 创建并切换到新分支
+     git branch <dev> 创建
+     git checkout <dev>   切换
 
 git branch  查看当前分支
+
+git merge <要合并的分支名>   合并分支
